@@ -1,6 +1,6 @@
 # README
 
-Demo application using rail 5.2.0.beta2 for rails ticket https://github.com/rails/rails/issues/31766  
+Demo application using Rails 5.2.0.beta2 for rails ticket https://github.com/rails/rails/issues/31766  
 
 PG::ConnectionBad error when executing resque jobs
   
