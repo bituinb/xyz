@@ -5,8 +5,7 @@ ruby '2.4.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0.beta2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg', '= 0.21'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -34,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+# gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +53,15 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+#  background jobs
+gem 'redis', '=3.3.3'
+gem 'resque'
+gem 'resque-scheduler', :git => 'git://github.com/bvandenbos/resque-scheduler.git'
+gem 'resque-web', require: 'resque_web'
+gem 'resque-scheduler-web' # this show all scheduled jobs
+gem 'sinatra', github: 'sinatra/sinatra', branch: 'master' # needed by resque-scheduler-web to function
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

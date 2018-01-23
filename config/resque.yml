@@ -1,0 +1,21 @@
+development:
+  url: redis://localhost:6379/1     
+  # redis://localhost:6379/2, in redis it default of 16 database, you select database by number not by name
+  # see http://www.rediscookbook.org/multiple_databases.html
+  # database 1 & 2  is used by cable, see cable.yml
+test:
+  url: redis://localhost:6379/2
+
+buddi:
+  url: redis://localhost:6379/1     
+  # redis://localhost:6379/2, in redis it default of 16 database, you select database by number not by name
+  # see http://www.rediscookbook.org/multiple_databases.html
+  # database 1 & 2  is used by cable, see cable.yml
+    
+production:
+  url: redis://localhost:6379/1  
+  # redis://localhost:6379/x, in redis it default of 16 database, you select database by number not by name
+  # see http://www.rediscookbook.org/multiple_databases.html
+  
+staging:
+  url: redis://localhost:6379/1     

@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Demo application using rail 5.2.0.beta2 for rails ticket https://github.com/rails/rails/issues/31766  
 
-Things you may want to cover:
+PG::ConnectionBad error when executing resque jobs
+  
 
-* Ruby version
+RAILS_ENV=development bundle exec rake  db:migrate
+RAILS_ENV=development bundle exec rake  db:seed
+RAILS_ENV=development bundle exec rake resque:restart_workers
+RAILS_ENV=development bundle exec rake test_job
 
-* System dependencies
+To access jobs list/faiures
+http://localhost:3000/admin/resque_web
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
