@@ -4,7 +4,7 @@ Demo application using rail 5.2.0.beta2 for rails ticket https://github.com/rail
 
 PG::ConnectionBad error when executing resque jobs
   
-Run following  task to setup data:
+Run the following  task to setup data:
 
 RAILS_ENV=development bundle exec rake  db:migrate
 
